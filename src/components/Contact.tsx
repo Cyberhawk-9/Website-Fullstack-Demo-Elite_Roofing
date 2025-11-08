@@ -23,9 +23,7 @@ const Contact: React.FC = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    setIsSubmitting(false);
+    navigate('/thank-you');
   };
 
   return (

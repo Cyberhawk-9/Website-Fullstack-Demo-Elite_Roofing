@@ -52,6 +52,7 @@ function App() {
             <Route path="/services/roof-repair" element={<RoofRepair />} />
             <Route path="/services/maintenance-program" element={<MaintenanceProgram />} />
             <Route path="/services/roof-installation" element={<RoofInstallation />} />
+            <Route path="/thank-you" element={<ThankYou />} />
           </Routes>
         </main>
         <QuoteForm />
