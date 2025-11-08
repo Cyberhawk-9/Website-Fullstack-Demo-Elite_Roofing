@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Send } from 'lucide-react';
 
 const QuoteForm: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     shortDescription: '',
     longDescription: '',

@@ -33,6 +33,11 @@ const Footer: React.FC = () => {
                 { name: 'Roof Shingles', path: '/services/roof-shingles' },
                 { name: 'Metal Roofing', path: '/services/metal-roofing' },
                 { name: 'Flat Roofing', path: '/services/flat-roofing' },
+              {[
+                { name: 'Roof Replacement', path: '/services/roof-replacement' },
+                { name: 'Roof Shingles', path: '/services/roof-shingles' },
+                { name: 'Metal Roofing', path: '/services/metal-roofing' },
+                { name: 'Flat Roofing', path: '/services/flat-roofing' },
                 { name: 'Roof Repair', path: '/services/roof-repair' },
                 { name: 'Maintenance Program', path: '/services/maintenance-program' },
                 { name: 'Roof Installation', path: '/services/roof-installation' }
@@ -58,6 +63,41 @@ const Footer: React.FC = () => {
                   to="/"
                   className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
                 >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/services"
+                  className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/gallery"
+                  className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/testimonials"
+                  className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
+                >
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/contact"
+                  className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
+                >
+                  Contact
+                </Link>
+              </li>
                   Home
                 </Link>
               </li>
@@ -134,10 +174,12 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm">
               © 2024 Elite Roofing. All rights reserved. Licensed & Insured.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <span className="text-gray-400">
-                Privacy Policy | Terms of Service | Warranty Information
-              </span>
+            <div className="flex space-x-6 text-sm text-gray-400">
+              <span>Privacy Policy</span>
+              <span>|</span>
+              <span>Terms of Service</span>
+              <span>|</span>
+              <span>Warranty Information</span>
             </div>
           </div>
         </div>
