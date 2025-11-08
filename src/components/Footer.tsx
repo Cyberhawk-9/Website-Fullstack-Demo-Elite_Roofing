@@ -18,18 +18,9 @@ const Footer: React.FC = () => {
               with exceptional craftsmanship and customer service.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 hover:bg-orange-500 p-2 rounded-lg transition-colors duration-300">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-orange-500 p-2 rounded-lg transition-colors duration-300">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-orange-500 p-2 rounded-lg transition-colors duration-300">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-gray-800 hover:bg-orange-500 p-2 rounded-lg transition-colors duration-300">
-                <Linkedin className="w-5 h-5" />
-              </a>
+              <div className="text-gray-400 text-sm">
+                Follow us on social media for updates and roofing tips
+              </div>
             </div>
           </div>
 
@@ -144,15 +135,9 @@ const Footer: React.FC = () => {
               © 2024 Elite Roofing. All rights reserved. Licensed & Insured.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                Warranty
-              </a>
+              <span className="text-gray-400">
+                Privacy Policy | Terms of Service | Warranty Information
+              </span>
             </div>
           </div>
         </div>

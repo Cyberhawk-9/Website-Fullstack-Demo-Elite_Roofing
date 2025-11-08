@@ -42,9 +42,11 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4">
-            <div className="text-2xl font-bold text-slate-800">
-              <span className="text-orange-500">Elite</span> Roofing
-            </div>
+            <img 
+              src="/images/output copy copy copy copy.jpg" 
+              alt="Elite Roofing Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
