@@ -18,11 +18,6 @@ const Footer: React.FC = () => {
               with exceptional craftsmanship and customer service.
             </p>
           </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Our Services</h3>
-            <ul className="space-y-2">
               {[
                 { name: 'Roof Replacement', path: '/services/roof-replacement' },
                 { name: 'Roof Shingles', path: '/services/roof-shingles' },
