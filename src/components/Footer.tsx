@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -17,11 +17,6 @@ const Footer: React.FC = () => {
               Your trusted roofing partner for over 15 years. We provide premium roofing solutions 
               with exceptional craftsmanship and customer service.
             </p>
-            <div className="flex space-x-4">
-              <div className="text-gray-400 text-sm">
-                Follow us on social media for updates and roofing tips
-              </div>
-            </div>
           </div>
 
           {/* Services */}
@@ -133,13 +128,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © 2024 Elite Roofing. All rights reserved. Licensed & Insured.
-            </div>
-            <div className="flex space-x-6 text-sm text-gray-400">
-              <span>Privacy Policy</span>
-              <span>|</span>
-              <span>Terms of Service</span>
-              <span>|</span>
-              <span>Warranty Information</span>
             </div>
           </div>
         </div>
