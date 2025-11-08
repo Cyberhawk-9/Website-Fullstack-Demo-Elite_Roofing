@@ -16,6 +16,7 @@ import FlatRoofing from './pages/services/FlatRoofing';
 import RoofRepair from './pages/services/RoofRepair';
 import MaintenanceProgram from './pages/services/MaintenanceProgram';
 import RoofInstallation from './pages/services/RoofInstallation';
+import ThankYou from './pages/ThankYou';
 import { initScrollAnimations } from './utils/animations';
 
 function App() {
