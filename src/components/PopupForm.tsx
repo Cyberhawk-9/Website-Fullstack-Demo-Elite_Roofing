@@ -34,9 +34,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isFormValid()) {
-      alert('Thank you! We\'ll contact you soon.');
-      setFormData({ shortDescription: '', longDescription: '', name: '', phone: '', email: '' });
-      onClose();
+      navigate('/thank-you');
     }
   };
 
