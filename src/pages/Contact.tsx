@@ -169,8 +169,16 @@ const Contact: React.FC = () => {
 
             {/* Contact Information */}
             <div className="animate-on-scroll">
+              <div className="mb-8">
+                <img
+                  src="/images/40_contact_consultation.jpg"
+                  alt="Roofing consultation"
+                  className="rounded-2xl shadow-lg w-full h-64 object-cover mb-8"
+                />
+              </div>
+
               <h2 className="text-3xl font-bold text-slate-800 mb-8">Get in Touch</h2>
-              
+
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
                   <div className="bg-orange-500/20 p-3 rounded-lg">

@@ -106,8 +106,44 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Quick Services Preview */}
+      {/* About Section with Image */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+                Your Trusted <span className="text-orange-500">Roofing Partner</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                For over 15 years, Elite Roofing has been protecting homes and businesses throughout the
+                metro area. Our commitment to excellence, combined with our extensive experience and
+                manufacturer certifications, makes us the preferred choice for all your roofing needs.
+              </p>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                We understand that your roof is one of your most important investments. That's why we use
+                only premium materials from trusted manufacturers and employ certified professionals who
+                take pride in every project. From the initial inspection to the final walkthrough, we
+                ensure transparent communication and meticulous attention to detail.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Whether you need emergency repairs after a storm, a complete roof replacement, or regular
+                maintenance to extend your roof's lifespan, our team has the expertise and dedication to
+                deliver exceptional results that stand the test of time.
+              </p>
+            </div>
+            <div>
+              <img
+                src="/images/02_homepage_about.jpg"
+                alt="Professional roofing team at work"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Services Preview */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
@@ -124,19 +160,19 @@ const Home: React.FC = () => {
             {[
               {
                 title: 'Roof Replacement',
-               image: '/images/service-card-roof-replacement.jpg',
+               image: '/images/03_card_roof_replacement.jpg',
                 path: '/services/roof-replacement',
                 description: 'Complete tear-off and installation with premium materials'
               },
               {
                 title: 'Metal Roofing',
-               image: '/images/service-card-metal-roofing.png',
+               image: '/images/04_card_metal_roofing.jpg',
                 path: '/services/metal-roofing',
                 description: 'Energy-efficient metal roofing systems that last 50+ years'
               },
               {
                 title: 'Roof Repair',
-               image: '/images/service-card-roof-repair.png',
+               image: '/images/05_card_roof_repair.jpg',
                 path: '/services/roof-repair',
                 description: 'Fast, reliable repairs for leaks, storm damage, and wear'
               }
