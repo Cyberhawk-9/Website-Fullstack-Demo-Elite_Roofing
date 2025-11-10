@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import QuoteForm from './components/QuoteForm';
@@ -19,6 +19,16 @@ import RoofInstallation from './pages/services/RoofInstallation';
 import ThankYou from './pages/ThankYou';
 import { initScrollAnimations } from './utils/animations';
 
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -37,6 +47,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={`min-h-screen bg-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Header />
         <main>

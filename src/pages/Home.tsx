@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/files_8003291-1762554128757-84c3d60a-cd13-4c2d-b1ae-1b40b589dc2a.png)',
+            backgroundImage: 'url(/images/homepage-hero.png)',
           }}
         >
           <div className="absolute inset-0 bg-slate-900/75"></div>
@@ -74,17 +74,17 @@ const Home: React.FC = () => {
             {[
               {
                 title: 'Roof Replacement',
-               image: '/images/ab761407-e29c-4997-97a1-a6fea05f52bc.jpg',
+               image: '/images/service-card-roof-replacement.jpg',
                 path: '/services/roof-replacement'
               },
               {
                 title: 'Metal Roofing',
-               image: '/images/b157e493-5533-4a69-8843-13074773f594.png',
+               image: '/images/service-card-metal-roofing.png',
                 path: '/services/metal-roofing'
               },
               {
                 title: 'Roof Repair',
-               image: '/images/b22be670-76ef-4333-b4ed-74f48d0ec65c.png',
+               image: '/images/service-card-roof-repair.png',
                 path: '/services/roof-repair'
               }
             ].map((service, index) => (

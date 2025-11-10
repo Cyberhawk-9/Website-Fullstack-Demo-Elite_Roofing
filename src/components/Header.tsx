@@ -7,6 +7,7 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,43 +33,43 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header 
+    <header
       className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-4' 
+        isScrolled || !isHomePage
+          ? 'bg-white/95 backdrop-blur-md shadow-lg py-4'
           : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4">
-            <img 
-              src="/images/output copy copy copy copy.jpg" 
-              alt="Elite Roofing Logo" 
+            <img
+              src="/images/logo.jpg"
+              alt="Elite Roofing Logo"
               className="h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link 
+            <Link
               to="/"
               className={`transition-colors duration-300 hover:text-orange-500 ${
-                isScrolled ? 'text-slate-800' : 'text-white'
+                isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
               } ${location.pathname === '/' ? 'text-orange-500' : ''}`}
             >
               Home
             </Link>
-            
-            <div 
+
+            <div
               className="relative"
               onMouseEnter={() => setIsServicesHovered(true)}
               onMouseLeave={() => setIsServicesHovered(false)}
             >
-              <Link 
+              <Link
                 to="/services"
                 className={`flex items-center transition-colors duration-300 hover:text-orange-500 ${
-                  isScrolled ? 'text-slate-800' : 'text-white'
+                  isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
                 } ${location.pathname.includes('/services') ? 'text-orange-500' : ''}`}
               >
                 Services
@@ -94,26 +95,26 @@ const Header: React.FC = () => {
               </div>
             </div>
             
-            <Link 
+            <Link
               to="/gallery"
               className={`transition-colors duration-300 hover:text-orange-500 ${
-                isScrolled ? 'text-slate-800' : 'text-white'
+                isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
               } ${location.pathname === '/gallery' ? 'text-orange-500' : ''}`}
             >
               Gallery
             </Link>
-            <Link 
+            <Link
               to="/testimonials"
               className={`transition-colors duration-300 hover:text-orange-500 ${
-                isScrolled ? 'text-slate-800' : 'text-white'
+                isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
               } ${location.pathname === '/testimonials' ? 'text-orange-500' : ''}`}
             >
               Testimonials
             </Link>
-            <Link 
+            <Link
               to="/contact"
               className={`transition-colors duration-300 hover:text-orange-500 ${
-                isScrolled ? 'text-slate-800' : 'text-white'
+                isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
               } ${location.pathname === '/contact' ? 'text-orange-500' : ''}`}
             >
               Contact
@@ -122,10 +123,10 @@ const Header: React.FC = () => {
 
           {/* Contact Info */}
           <div className="hidden md:flex items-center space-x-6">
-            <button 
+            <button
               onClick={handlePhoneClick}
               className={`flex items-center space-x-2 hover:text-orange-500 transition-colors duration-300 ${
-                isScrolled ? 'text-slate-700' : 'text-white'
+                isScrolled || !isHomePage ? 'text-slate-700' : 'text-white'
               }`}
             >
               <Phone className="w-4 h-4" />
@@ -142,7 +143,7 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 ${isScrolled ? 'text-slate-800' : 'text-white'}`}
+            className={`lg:hidden p-2 ${isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'}`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

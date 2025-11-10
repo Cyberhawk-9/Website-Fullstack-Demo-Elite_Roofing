@@ -41,7 +41,7 @@ const RoofReplacement: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-r from-slate-800 to-slate-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/images/84c3d60a-cd13-4c2d-b1ae-1b40b589dc2a.png" 
+            src="/images/service-card-roof-installation.png" 
             alt="Roof replacement project"
             className="w-full h-full object-cover opacity-20"
           />
@@ -72,7 +72,7 @@ const RoofReplacement: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="/images/output.jpg" 
+                src="/images/roof-replacement-hero.jpg" 
                 alt="Professional roof replacement"
                 className="rounded-2xl shadow-2xl"
               />
@@ -166,7 +166,7 @@ const RoofReplacement: React.FC = () => {
             </div>
             <div>
               <img 
-                src="/images/84c3d60a-cd13-4c2d-b1ae-1b40b589dc2a.png" 
+                src="/images/service-card-roof-installation.png" 
                 alt="Roof replacement materials"
                 className="rounded-2xl shadow-lg w-full"
               />

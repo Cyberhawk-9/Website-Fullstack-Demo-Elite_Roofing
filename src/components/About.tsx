@@ -80,7 +80,7 @@ const About: React.FC = () => {
           <div className="animate-on-scroll">
             <div className="relative">
               <img 
-                src="/images/about-roofers-working.jpg" 
+                src="/images/homepage-roofers-working.jpg" 
                 alt="Professional roofers at work" 
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />

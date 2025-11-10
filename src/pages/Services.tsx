@@ -6,43 +6,43 @@ const Services: React.FC = () => {
   const services = [
     {
       title: 'Roof Replacement',
-      image: '/images/ab761407-e29c-4997-97a1-a6fea05f52bc.jpg',
+      image: '/images/service-card-roof-replacement.jpg',
       description: 'Complete roof replacement with premium materials and expert installation.',
       path: '/services/roof-replacement'
     },
     {
       title: 'Roof Shingles',
-      image: '/images/937747cc-9d96-4812-b939-e50f507777a6.png',
+      image: '/images/service-card-roof-shingles.png',
       description: 'High-quality shingle installation and replacement services.',
       path: '/services/roof-shingles'
     },
     {
       title: 'Metal Roofing',
-      image: '/images/b157e493-5533-4a69-8843-13074773f594.png',
+      image: '/images/service-card-metal-roofing.png',
       description: 'Durable metal roofing solutions for superior protection.',
       path: '/services/metal-roofing'
     },
     {
       title: 'Flat Roofing',
-      image: '/images/f26cece2-913e-4465-b7a9-d46528ba5b72.png',
+      image: '/images/service-card-flat-roofing.png',
       description: 'Specialized flat roofing systems for commercial properties.',
       path: '/services/flat-roofing'
     },
     {
       title: 'Roof Repair',
-      image: '/images/b22be670-76ef-4333-b4ed-74f48d0ec65c.png',
+      image: '/images/service-card-roof-repair.png',
       description: 'Quick and reliable roof repair services for all issues.',
       path: '/services/roof-repair'
     },
     {
       title: 'Maintenance Program',
-      image: '/images/files_8003291-1762553295549-output.jpg',
+      image: '/images/service-card-maintenance.jpg',
       description: 'Comprehensive maintenance programs to extend roof life.',
       path: '/services/maintenance-program'
     },
     {
       title: 'Roof Installation',
-      image: '/images/output.jpg',
+      image: '/images/roof-replacement-hero.jpg',
       description: 'Professional roof installation for new construction.',
       path: '/services/roof-installation'
     }
