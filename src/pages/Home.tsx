@@ -7,12 +7,12 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/homepage-hero.png)',
+            backgroundImage: 'url(/images/01_homepage_hero.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-slate-900/75"></div>
@@ -26,12 +26,12 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fadeInUp">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Premium <span className="text-orange-500">Roofing</span>
               <br />
               Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
               Protecting your home with expert craftsmanship, quality materials, and exceptional service.
               Your trusted roofing partner for over 15 years, delivering peace of mind one roof at a time.
             </p>
