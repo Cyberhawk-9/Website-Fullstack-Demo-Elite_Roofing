@@ -36,7 +36,7 @@ const MetalRoofing: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-r from-slate-800 to-slate-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/280232/pexels-photo-280232.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+            src="/images/19_metal_architectural.jpg" 
             alt="Metal roofing installation"
             className="w-full h-full object-cover opacity-20"
           />
@@ -67,7 +67,7 @@ const MetalRoofing: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/1648769/pexels-photo-1648769.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                src="/images/19_metal_architectural.jpg" 
                 alt="Metal roof detail"
                 className="rounded-2xl shadow-2xl"
               />
@@ -127,7 +127,7 @@ const MetalRoofing: React.FC = () => {
             </div>
             <div>
               <img 
-                src="https://images.pexels.com/photos/1648770/pexels-photo-1648770.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                src="/images/19_metal_architectural.jpg" 
                 alt="Metal roofing benefits"
                 className="rounded-2xl shadow-lg w-full"
               />

@@ -6,49 +6,49 @@ const Services: React.FC = () => {
   const services = [
     {
       title: 'Roof Replacement',
-      image: '/images/service-card-roof-replacement.jpg',
+      image: '/images/06_services_replacement.jpg',
       description: 'Complete tear-off and installation with premium materials. Transform your aging roof into a protective barrier that adds value and curb appeal to your home.',
       features: ['Lifetime warranties available', 'Energy-efficient options', 'Complete tear-off & disposal'],
       path: '/services/roof-replacement'
     },
     {
       title: 'Roof Shingles',
-      image: '/images/service-card-roof-shingles.png',
+      image: '/images/07_services_shingles.jpg',
       description: 'Premium architectural shingles from top manufacturers. Choose from hundreds of colors and styles to perfectly match your home\'s aesthetic.',
       features: ['GAF & CertainTeed certified', 'Impact-resistant options', 'Extended color selection'],
       path: '/services/roof-shingles'
     },
     {
       title: 'Metal Roofing',
-      image: '/images/service-card-metal-roofing.png',
+      image: '/images/08_services_metal.jpg',
       description: 'Energy-efficient metal roofing systems engineered to last 50+ years. Reduce cooling costs while protecting your home with superior durability.',
       features: ['50+ year lifespan', 'Energy Star rated', 'Fire & wind resistant'],
       path: '/services/metal-roofing'
     },
     {
       title: 'Flat Roofing',
-      image: '/images/service-card-flat-roofing.png',
+      image: '/images/09_services_flat.jpg',
       description: 'Commercial-grade flat roofing systems using TPO, EPDM, and modified bitumen. Specialized expertise for low-slope and flat roof applications.',
       features: ['Commercial expertise', 'Multiple membrane options', 'Superior waterproofing'],
       path: '/services/flat-roofing'
     },
     {
       title: 'Roof Repair',
-      image: '/images/service-card-roof-repair.png',
+      image: '/images/10_services_repair.jpg',
       description: 'Fast, reliable repairs for leaks, storm damage, and general wear. Same-day emergency service available to prevent further damage to your home.',
       features: ['Same-day emergency service', 'Leak detection & repair', 'Storm damage experts'],
       path: '/services/roof-repair'
     },
     {
       title: 'Maintenance Program',
-      image: '/images/service-card-maintenance.jpg',
+      image: '/images/11_services_maintenance.jpg',
       description: 'Proactive maintenance plans that extend your roof\'s lifespan and prevent costly repairs. Includes biannual inspections and priority service.',
       features: ['Biannual inspections', 'Priority emergency service', 'Detailed condition reports'],
       path: '/services/maintenance-program'
     },
     {
       title: 'Roof Installation',
-      image: '/images/service-card-roof-installation.png',
+      image: '/images/12_services_installation.jpg',
       description: 'Expert installation for new construction and additions. We work seamlessly with builders to deliver on-time, on-budget roofing solutions.',
       features: ['New construction specialists', 'Builder partnerships', 'Coordinated scheduling'],
       path: '/services/roof-installation'

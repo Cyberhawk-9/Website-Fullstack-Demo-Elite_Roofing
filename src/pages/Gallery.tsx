@@ -3,34 +3,34 @@ import React from 'react';
 const Gallery: React.FC = () => {
   const projects = [
     {
-      title: 'Modern Metal Roof Installation',
-      image: 'https://images.pexels.com/photos/280232/pexels-photo-280232.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      title: 'Modern Home with Premium Shingles',
+      image: '/images/34_gallery_modern_home.jpg',
+      category: 'Residential'
+    },
+    {
+      title: 'Barn with Standing Seam Metal Roof',
+      image: '/images/35_gallery_barn_metal.jpg',
       category: 'Metal Roofing'
     },
     {
-      title: 'Asphalt Shingle Replacement',
-      image: 'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      title: 'Commercial Flat Roof System',
+      image: '/images/36_gallery_commercial_flat.jpg',
+      category: 'Commercial'
+    },
+    {
+      title: 'Eco-Friendly Solar Panel Integration',
+      image: '/images/37_gallery_solar_panels.jpg',
+      category: 'Solar Integration'
+    },
+    {
+      title: 'Multi-Color Architectural Shingles',
+      image: '/images/38_gallery_multicolor.jpg',
       category: 'Shingle Roofing'
     },
     {
-      title: 'Commercial Flat Roof System',
-      image: 'https://images.pexels.com/photos/1648769/pexels-photo-1648769.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      category: 'Flat Roofing'
-    },
-    {
-      title: 'Emergency Storm Damage Repair',
-      image: 'https://images.pexels.com/photos/1648770/pexels-photo-1648770.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      category: 'Roof Repair'
-    },
-    {
-      title: 'Luxury Home Roof Replacement',
-      image: 'https://images.pexels.com/photos/1648771/pexels-photo-1648771.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      title: 'Complete Transformation Before & After',
+      image: '/images/39_gallery_before_after.jpg',
       category: 'Roof Replacement'
-    },
-    {
-      title: 'New Construction Installation',
-      image: 'https://images.pexels.com/photos/1648772/pexels-photo-1648772.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      category: 'New Installation'
     }
   ];
 

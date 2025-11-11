@@ -59,7 +59,7 @@ const RoofInstallation: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-r from-slate-800 to-slate-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/images/service-card-roof-installation.png" 
+            src="/images/32_installation_process.jpg" 
             alt="Roof installation project"
             className="w-full h-full object-cover opacity-20"
           />
@@ -177,7 +177,7 @@ const RoofInstallation: React.FC = () => {
             </div>
             <div>
               <img 
-                src="/images/service-card-roof-installation.png" 
+                src="/images/32_installation_process.jpg" 
                 alt="Professional installation"
                 className="rounded-2xl shadow-lg w-full"
               />

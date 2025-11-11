@@ -36,7 +36,7 @@ const FlatRoofing: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-r from-slate-800 to-slate-900 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/1648769/pexels-photo-1648769.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+            src="/images/22_flat_system.jpg" 
             alt="Flat roofing system"
             className="w-full h-full object-cover opacity-20"
           />
@@ -67,7 +67,7 @@ const FlatRoofing: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/1648772/pexels-photo-1648772.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                src="/images/22_flat_system.jpg" 
                 alt="Flat roof installation"
                 className="rounded-2xl shadow-2xl"
               />
@@ -127,7 +127,7 @@ const FlatRoofing: React.FC = () => {
             </div>
             <div>
               <img 
-                src="https://images.pexels.com/photos/1648773/pexels-photo-1648773.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                src="/images/22_flat_system.jpg" 
                 alt="Flat roof benefits"
                 className="rounded-2xl shadow-lg w-full"
               />
