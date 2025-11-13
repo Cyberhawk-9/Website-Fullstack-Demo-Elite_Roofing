@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             <img
               src="/images/files_8003291-1763060699986-logo.jpg"
               alt="Elite Roofing Logo"
-              className="h-16 w-auto"
+              className={`h-16 w-auto ${isScrolled || !isHomePage ? '' : 'mix-blend-screen brightness-150'}`}
             />
           </Link>
 

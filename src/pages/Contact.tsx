@@ -35,12 +35,34 @@ const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
-    const emailBody = `${formData.longDescription}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
-    const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
-    window.location.href = mailtoLink;
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            description: formData.longDescription,
+          }),
+        }
+      );
 
-    await new Promise(resolve => setTimeout(resolve, 500));
-    navigate('/thank-you');
+      if (response.ok) {
+        navigate('/thank-you');
+      } else {
+        console.error('Failed to send message');
+        navigate('/thank-you');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      navigate('/thank-you');
+    }
   };
 
   return (
@@ -96,7 +118,7 @@ const Contact: React.FC = () => {
                     rows={5}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Please describe what service you offer in detail..."
+                    placeholder="Please describe your company/service/offer in detail..."
                   ></textarea>
                 </div>
                 

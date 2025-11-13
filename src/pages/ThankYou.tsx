@@ -12,16 +12,16 @@ const ThankYou: React.FC = () => {
           </div>
           <h1 className="text-3xl font-bold text-slate-800 mb-4">Thank You!</h1>
           <p className="text-gray-600 leading-relaxed">
-            Your message has been received successfully. Our team will review your request 
-            and get back to you within 24 hours with a detailed response.
+            Your message has been received successfully. I'll review your request
+            and get back to you within 24-48 hours with a detailed response.
           </p>
         </div>
-        
+
         <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
           <p className="text-orange-800 text-sm">
             <strong>What's Next?</strong><br />
-            We'll contact you to schedule a free consultation and provide you with 
-            a detailed estimate for your roofing project.
+            I'll contact you to discuss your project requirements and provide you with
+            information about creating a custom website for your business.
           </p>
         </div>
         

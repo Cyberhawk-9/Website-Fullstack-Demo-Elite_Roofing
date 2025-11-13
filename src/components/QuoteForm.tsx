@@ -28,13 +28,37 @@ const QuoteForm: React.FC = () => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid()) {
-      const emailBody = `${formData.longDescription}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
-      const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
-      setTimeout(() => navigate('/thank-you'), 500);
+    if (!isFormValid()) return;
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            description: formData.longDescription,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        navigate('/thank-you');
+      } else {
+        console.error('Failed to send message');
+        navigate('/thank-you');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      navigate('/thank-you');
     }
   };
 
@@ -77,7 +101,7 @@ const QuoteForm: React.FC = () => {
                 onChange={handleInputChange}
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
-                placeholder="Please describe what service you offer in detail..."
+                placeholder="Please describe your company/service/offer in detail..."
               />
             </div>
 

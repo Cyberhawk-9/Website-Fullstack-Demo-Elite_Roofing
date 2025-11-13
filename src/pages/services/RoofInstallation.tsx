@@ -89,8 +89,8 @@ const RoofInstallation: React.FC = () => {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src="/images/roof-replacement-hero.jpg" 
+              <img
+                src="/images/32_installation_process.jpg"
                 alt="New roof installation"
                 className="rounded-2xl shadow-2xl"
               />

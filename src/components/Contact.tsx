@@ -22,12 +22,34 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const emailBody = `${formData.message}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
-    const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
-    window.location.href = mailtoLink;
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            description: formData.message,
+          }),
+        }
+      );
 
-    await new Promise(resolve => setTimeout(resolve, 500));
-    navigate('/thank-you');
+      if (response.ok) {
+        navigate('/thank-you');
+      } else {
+        console.error('Failed to send message');
+        navigate('/thank-you');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      navigate('/thank-you');
+    }
   };
 
   return (

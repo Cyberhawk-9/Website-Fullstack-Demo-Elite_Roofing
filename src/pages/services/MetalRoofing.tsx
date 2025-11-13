@@ -48,9 +48,10 @@ const MetalRoofing: React.FC = () => {
                 Durable <span className="text-orange-500">Metal Roofing</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Invest in the ultimate roofing solution with our premium metal roofing systems. 
-                Offering unmatched durability, energy efficiency, and style that lasts for decades 
-                with minimal maintenance.
+                Invest in the ultimate roofing solution with our premium metal roofing systems.
+                Offering unmatched durability, energy efficiency, and style that lasts for decades
+                with minimal maintenance. Our expert installation ensures your metal roof provides
+                maximum protection and value for your property investment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
