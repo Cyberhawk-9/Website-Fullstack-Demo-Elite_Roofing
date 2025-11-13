@@ -47,11 +47,11 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button 
+            <button
               onClick={scrollToContact}
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group"
             >
-              Get Free Estimate
+              Request a Site Like This
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 

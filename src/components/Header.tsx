@@ -28,8 +28,8 @@ const Header: React.FC = () => {
     { name: 'Roof Installation', path: '/services/roof-installation' }
   ];
 
-  const handlePhoneClick = () => {
-    window.location.href = 'tel:5551234567';
+  const handlePhoneClick = (e: React.MouseEvent) => {
+    e.preventDefault();
   };
 
   return (
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4">
             <img
-              src="/images/logo copy.png"
+              src="/images/files_8003291-1763060699986-logo.jpg"
               alt="Elite Roofing Logo"
               className="h-16 w-auto"
             />
@@ -132,11 +132,11 @@ const Header: React.FC = () => {
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">(555) 123-4567</span>
             </button>
-            <Link 
+            <Link
               to="/contact"
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Get Quote
+              Request a Site Like This
             </Link>
           </div>
 
@@ -190,12 +190,12 @@ const Header: React.FC = () => {
               Contact
             </Link>
             <div className="px-4 py-2">
-              <Link 
+              <Link
                 to="/contact"
                 className="block w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get Quote
+                Request a Site Like This
               </Link>
             </div>
           </nav>

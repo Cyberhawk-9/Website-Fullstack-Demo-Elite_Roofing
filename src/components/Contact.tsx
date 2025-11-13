@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,10 +21,12 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
+    const emailBody = `${formData.message}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
+    const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = mailtoLink;
+
+    await new Promise(resolve => setTimeout(resolve, 500));
     navigate('/thank-you');
   };
 
@@ -31,11 +35,11 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Get Your Free <span className="text-orange-500">Estimate</span>
+            Request Your <span className="text-orange-500">Custom Website</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to protect your home with premium roofing? Contact us today for a free, 
-            no-obligation estimate and experience the Elite Roofing difference.
+            Interested in a professional website like this? Contact me today to discuss
+            your project and get a custom website built for your business.
           </p>
         </div>
 
@@ -126,7 +130,7 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Tell us about your roofing project..."
+                  placeholder="Tell me about your business and what you need..."
                 ></textarea>
               </div>
               

@@ -32,12 +32,14 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid()) return;
-    
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
+    const emailBody = `${formData.longDescription}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
+    const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = mailtoLink;
+
+    await new Promise(resolve => setTimeout(resolve, 500));
     navigate('/thank-you');
   };
 
@@ -50,8 +52,8 @@ const Contact: React.FC = () => {
             Contact <span className="text-orange-500">Us</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to protect your home with premium roofing? Get your free estimate today 
-            and experience the Elite Roofing difference.
+            Interested in a professional website like this? Contact me today to discuss
+            your project and get a custom website built for your business.
           </p>
         </div>
       </section>
@@ -62,7 +64,7 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="animate-on-scroll">
-              <h2 className="text-3xl font-bold text-slate-800 mb-8">Get Your Free Estimate</h2>
+              <h2 className="text-3xl font-bold text-slate-800 mb-8">Request Your Custom Website</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -78,7 +80,7 @@ const Contact: React.FC = () => {
                     maxLength={100}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-                    placeholder="What roofing service do you need?"
+                    placeholder="What service do you offer?"
                   />
                 </div>
                 
@@ -94,7 +96,7 @@ const Contact: React.FC = () => {
                     rows={5}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Please describe the problem or project in detail..."
+                    placeholder="Please describe what service you offer in detail..."
                   ></textarea>
                 </div>
                 
@@ -186,7 +188,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-slate-800 mb-1">Phone</h4>
-                    <a href="tel:5551234567" className="text-gray-600 text-lg hover:text-orange-500 transition-colors">(555) 123-4567</a>
+                    <p className="text-gray-600 text-lg">(555) 123-4567</p>
                     <p className="text-gray-500 text-sm">Call us for immediate assistance</p>
                   </div>
                 </div>

@@ -31,7 +31,10 @@ const QuoteForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isFormValid()) {
-      navigate('/thank-you');
+      const emailBody = `${formData.longDescription}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
+      const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+      setTimeout(() => navigate('/thank-you'), 500);
     }
   };
 
@@ -60,7 +63,7 @@ const QuoteForm: React.FC = () => {
                 onChange={handleInputChange}
                 maxLength={100}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="What roofing service do you need?"
+                placeholder="What service do you offer?"
               />
             </div>
 
@@ -74,7 +77,7 @@ const QuoteForm: React.FC = () => {
                 onChange={handleInputChange}
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
-                placeholder="Please describe the problem or project in detail..."
+                placeholder="Please describe what service you offer in detail..."
               />
             </div>
 
@@ -130,7 +133,7 @@ const QuoteForm: React.FC = () => {
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 }`}
               >
-                Get My Free Quote
+                Request a Site Like This
                 <Send className="ml-2 w-5 h-5" />
               </button>
             </div>

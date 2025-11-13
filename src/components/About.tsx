@@ -72,7 +72,7 @@ const About: React.FC = () => {
             </div>
             
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              Get Your Free Estimate
+              Request a Site Like This
             </button>
           </div>
           

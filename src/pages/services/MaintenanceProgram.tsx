@@ -60,10 +60,10 @@ const MaintenanceProgram: React.FC = () => {
                   to="/contact"
                   className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
                 >
-                  Join Program
+                  Request a Site Like This
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+                <button onClick={(e) => e.preventDefault()} className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                   Call (555) 123-4567
                 </button>
               </div>

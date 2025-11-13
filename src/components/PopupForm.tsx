@@ -36,7 +36,10 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isFormValid()) {
-      navigate('/thank-you');
+      const emailBody = `${formData.longDescription}\n\n${formData.name}\n${formData.phone}\n${formData.email}`;
+      const mailtoLink = `mailto:owen@cyberhawk.dev?subject=Someone Wants a Website!&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+      setTimeout(() => navigate('/thank-you'), 500);
     }
   };
 
@@ -47,7 +50,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold text-slate-800">Get Your Free Quote</h3>
+            <h3 className="text-2xl font-bold text-slate-800">Request Your Custom Website</h3>
             <button
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
@@ -68,7 +71,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
                 onChange={handleInputChange}
                 maxLength={100}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="What roofing service do you need?"
+                placeholder="What service do you offer?"
               />
             </div>
 
@@ -82,7 +85,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
                 onChange={handleInputChange}
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
-                placeholder="Please describe the problem or project in detail..."
+                placeholder="Please describe what service you offer in detail..."
               />
             </div>
 
