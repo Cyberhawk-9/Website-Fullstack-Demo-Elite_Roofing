@@ -29,13 +29,9 @@ function ScrollToTop() {
   return null;
 }
 
-function AppContent() {
+function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const location = useLocation();
-
-  const hideFooterContactPages = ['/contact', '/thank-you'];
-  const shouldShowFooterContact = !hideFooterContactPages.includes(location.pathname);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -50,37 +46,31 @@ function AppContent() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/services/roof-replacement" element={<RoofReplacement />} />
-          <Route path="/services/roof-shingles" element={<RoofShingles />} />
-          <Route path="/services/metal-roofing" element={<MetalRoofing />} />
-          <Route path="/services/flat-roofing" element={<FlatRoofing />} />
-          <Route path="/services/roof-repair" element={<RoofRepair />} />
-          <Route path="/services/maintenance-program" element={<MaintenanceProgram />} />
-          <Route path="/services/roof-installation" element={<RoofInstallation />} />
-          <Route path="/thank-you" element={<ThankYou />} />
-        </Routes>
-      </main>
-      {shouldShowFooterContact && <QuoteForm />}
-      <Footer />
-      <PopupForm isOpen={showPopup} onClose={() => setShowPopup(false)} />
-    </div>
-  );
-}
-
-function App() {
-  return (
     <Router>
       <ScrollToTop />
-      <AppContent />
+      <div className={`min-h-screen bg-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/services/roof-replacement" element={<RoofReplacement />} />
+            <Route path="/services/roof-shingles" element={<RoofShingles />} />
+            <Route path="/services/metal-roofing" element={<MetalRoofing />} />
+            <Route path="/services/flat-roofing" element={<FlatRoofing />} />
+            <Route path="/services/roof-repair" element={<RoofRepair />} />
+            <Route path="/services/maintenance-program" element={<MaintenanceProgram />} />
+            <Route path="/services/roof-installation" element={<RoofInstallation />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+          </Routes>
+        </main>
+        <QuoteForm />
+        <Footer />
+        <PopupForm isOpen={showPopup} onClose={() => setShowPopup(false)} />
+      </div>
     </Router>
   );
 }

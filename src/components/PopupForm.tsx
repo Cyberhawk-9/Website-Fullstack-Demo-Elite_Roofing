@@ -43,7 +43,6 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
         'template_qw2ppxs',
         e.currentTarget
       );
-      onClose();
       navigate('/thank-you');
     } catch (error) {
       console.error('EmailJS error:', error);
@@ -74,7 +73,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
               </label>
               <input
                 type="text"
-                name="brief_description"
+                name="shortDescription"
                 value={formData.shortDescription}
                 onChange={handleInputChange}
                 maxLength={100}
@@ -88,12 +87,12 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
                 Detailed Description
               </label>
               <textarea
-                name="message"
+                name="longDescription"
                 value={formData.longDescription}
                 onChange={handleInputChange}
                 rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
-                placeholder="Tell me all about your company, all of the services you offer, and where you serve"
+                placeholder="Please describe your company/service/offer in detail..."
               />
             </div>
 
