@@ -29,23 +29,39 @@ const Contact: React.FC = () => {
     );
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid()) return;
 
     setIsSubmitting(true);
 
     try {
-      await (window as any).emailjs.sendForm(
-        'service_bt3oowm',
-        'template_qw2ppxs',
-        e.currentTarget
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            description: formData.longDescription,
+          }),
+        }
       );
-      navigate('/thank-you');
+
+      if (response.ok) {
+        navigate('/thank-you');
+      } else {
+        console.error('Failed to send message');
+        navigate('/thank-you');
+      }
     } catch (error) {
-      console.error('EmailJS error:', error);
-      alert('Oops! Something went wrong.');
-      setIsSubmitting(false);
+      console.error('Error submitting form:', error);
+      navigate('/thank-you');
     }
   };
 
