@@ -30,6 +30,7 @@ const Header: React.FC = () => {
 
   const handlePhoneClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    alert('Sorry, this phone number is a planned dud. They work on the real websites.');
   };
 
   return (

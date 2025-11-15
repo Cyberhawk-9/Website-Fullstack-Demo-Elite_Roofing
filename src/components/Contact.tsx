@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import LocationTooltip from './LocationTooltip';
 
 const Contact: React.FC = () => {
   const navigate = useNavigate();
@@ -185,16 +186,18 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500/20 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-orange-500" />
+                <LocationTooltip>
+                  <div className="flex items-start space-x-4 cursor-help">
+                    <div className="bg-orange-500/20 p-3 rounded-lg">
+                      <MapPin className="w-6 h-6 text-orange-500" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">Service Area</h4>
+                      <p className="text-gray-300">Metro Area & Surrounding</p>
+                      <p className="text-gray-400 text-sm">50-mile radius coverage</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Service Area</h4>
-                    <p className="text-gray-300">Metro Area & Surrounding</p>
-                    <p className="text-gray-400 text-sm">50-mile radius coverage</p>
-                  </div>
-                </div>
+                </LocationTooltip>
                 
                 <div className="flex items-start space-x-4">
                   <div className="bg-orange-500/20 p-3 rounded-lg">

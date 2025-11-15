@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import LocationTooltip from '../components/LocationTooltip';
 
 const Contact: React.FC = () => {
   const navigate = useNavigate();
@@ -80,7 +81,7 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     id="shortDescription"
-                    name="shortDescription"
+                    name="brief_description"
                     value={formData.shortDescription}
                     onChange={handleInputChange}
                     maxLength={100}
@@ -96,13 +97,13 @@ const Contact: React.FC = () => {
                   </label>
                   <textarea
                     id="longDescription"
-                    name="longDescription"
+                    name="message"
                     value={formData.longDescription}
                     onChange={handleInputChange}
                     rows={5}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Please describe your company/service/offer in detail..."
+                    placeholder="Tell me all about your company, all of the services you offer, and where you serve"
                   ></textarea>
                 </div>
                 
@@ -210,16 +211,18 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500/20 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-orange-500" />
+                <LocationTooltip>
+                  <div className="flex items-start space-x-4 cursor-help">
+                    <div className="bg-orange-500/20 p-3 rounded-lg">
+                      <MapPin className="w-6 h-6 text-orange-500" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-slate-800 mb-1">Service Area</h4>
+                      <p className="text-gray-600 text-lg">Metro Area & Surrounding</p>
+                      <p className="text-gray-500 text-sm">50-mile radius coverage</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-slate-800 mb-1">Service Area</h4>
-                    <p className="text-gray-600 text-lg">Metro Area & Surrounding</p>
-                    <p className="text-gray-500 text-sm">50-mile radius coverage</p>
-                  </div>
-                </div>
+                </LocationTooltip>
                 
                 <div className="flex items-start space-x-4">
                   <div className="bg-orange-500/20 p-3 rounded-lg">

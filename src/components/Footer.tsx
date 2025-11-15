@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import LocationTooltip from './LocationTooltip';
 
 const Footer: React.FC = () => {
   return (
@@ -103,13 +104,15 @@ const Footer: React.FC = () => {
                 <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
                 <span className="text-gray-300">info@eliteroofing.com</span>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300">
-                  Metro Area & Surrounding<br />
-                  50-mile radius coverage
-                </span>
-              </div>
+              <LocationTooltip>
+                <div className="flex items-start space-x-3 cursor-help">
+                  <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">
+                    Metro Area & Surrounding<br />
+                    50-mile radius coverage
+                  </span>
+                </div>
+              </LocationTooltip>
             </div>
             
             <div className="bg-orange-500/10 p-4 rounded-lg border border-orange-500/20">
