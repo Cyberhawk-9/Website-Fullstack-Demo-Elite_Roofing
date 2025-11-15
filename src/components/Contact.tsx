@@ -18,37 +18,21 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            description: formData.message,
-          }),
-        }
+      await (window as any).emailjs.sendForm(
+        'service_bt3oowm',
+        'template_qw2ppxs',
+        e.currentTarget
       );
-
-      if (response.ok) {
-        navigate('/thank-you');
-      } else {
-        console.error('Failed to send message');
-        navigate('/thank-you');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
       navigate('/thank-you');
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert('Oops! Something went wrong.');
+      setIsSubmitting(false);
     }
   };
 

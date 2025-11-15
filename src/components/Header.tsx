@@ -44,9 +44,9 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4">
             <img
-              src="/images/files_8003291-1763060699986-logo.jpg"
+              src="/images/logo.png"
               alt="Elite Roofing Logo"
-              className={`h-16 w-auto ${isScrolled || !isHomePage ? '' : 'mix-blend-screen brightness-150'}`}
+              className="h-16 w-auto"
             />
           </Link>
 
