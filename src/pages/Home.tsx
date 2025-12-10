@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-36 sm:pt-40">
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
